@@ -1,0 +1,42 @@
+@use '../../scss/vars';
+
+.service-menu {
+
+  &__items {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 6px;
+    padding: 0 16px 0 16px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    list-style-type: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: vars.$min-size-md) {
+      padding-left: 24px;
+    }
+  }
+
+  &__item {
+    display: block;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    min-height: 40px;
+    line-height: 40px;
+    color: vars.$color-active;
+    font-size: 16px;
+    text-decoration: none;
+
+    &--active {
+      border-radius: 6px;
+      background-color: white;
+      border: 2px solid #B8FFEC;
+    }
+  }
+}

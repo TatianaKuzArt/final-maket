@@ -1,0 +1,31 @@
+mixin price ()
+    - const products = []
+    - products.push({serviceName: "Диагностика", price: "Бесплатно", time: "30 мин"})
+    - products.push({serviceName: "Тестирование с выдачей технического заключения", price: "1000р", time: "30-120 мин"})
+    - products.push({serviceName: "Замена полифонического динамика", price: "1000р", time: "30-120 мин"})
+    - products.push({serviceName: "Замена дисплея", price: "1000р", time: "30-120 мин"})
+    - products.push({serviceName: "Замена программного обеспечения", price: "1000р", time: "30-120 мин"})
+
+        +swiper(class="price")
+            ol.price__header
+                li.price__title Ремонтные услуги
+                li.price__title Цена
+                li.price__title Срок
+
+            +swiper-wrapper(class="price__items")
+                each prod in products
+                    +swiper-slide(class="price__item price-item")
+                        +price-item(prod.serviceName, prod.price, prod.time)
+            +swiper-pagination
+
+
+mixin price-item(serviceName, price, time)
+    h2.price-item__title= "Ремонтные услуги"
+    p.price-item__value= serviceName
+    h2.price-item__title= "Цена"
+    p.price-item__value= price
+    h2.price-item__title= "Срок"
+    p.price-item__value= time
+    +button-action("ЗАКАЗАТЬ").price-item__order
+
+

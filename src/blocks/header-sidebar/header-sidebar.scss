@@ -1,0 +1,54 @@
+@use '../../scss/vars';
+
+@mixin image-size() {
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+
+.header-sidebar {
+  display: grid;
+  align-self: start;
+  grid-template-columns: 50px auto auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  justify-items: left;
+  align-items: center;
+  height: 70px;
+  margin-top: 8px;
+
+  @media (min-width: vars.$min-size-ld) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__button_back {
+    @include image-size();
+    background: url("../img/close.svg") no-repeat center;
+    justify-self: start;
+
+    @media (min-width: vars.$min-size-ld) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    @include image-size();
+    background: url("../img/Group.svg") center;
+    width: 97px;
+    height: 51px;
+    justify-self: start;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__button_search {
+    @include image-size();
+    justify-self: end;
+    background-image: url('../img/search.svg');
+  }
+}

@@ -1,0 +1,17 @@
+@use '../../scss/vars';
+
+.button-action {
+  height: 32px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: right;
+  text-decoration: none;
+  background: vars.$color-attention url("../img/goside.svg") no-repeat right center;
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+
+}

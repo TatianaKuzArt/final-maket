@@ -1,0 +1,21 @@
+@use '../../scss/vars';
+
+.chapter-title {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 16px 0 16px 0;
+  display: flex;
+  height: 80px;
+  color: vars.$title-color;
+  background-image: linear-gradient(to right, vars.$background-body-color, vars.$background-slide-color);
+  align-items: center;
+  padding-left: 16px;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  font-weight: normal;
+  text-wrap: auto;
+
+  @media (min-width: vars.$min-size-md) {
+    padding-left: 24px;
+  }
+}

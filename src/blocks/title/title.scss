@@ -1,0 +1,65 @@
+@use '../../scss/vars';
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin: 16px 0 16px 0;
+
+  @media (min-width: vars.$min-size-ld) {
+    margin: 42px 24px 16px 0;
+  }
+
+  &__text {
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    height: 40px;
+    background-size: contain;
+    background: url("../img/highlight.svg") no-repeat left center;
+    padding-left: 16px;
+    font-size: 28px;
+    font-weight: 700;
+
+    @media (min-width: vars.$min-size-md) {
+      padding-left: 24px;
+    }
+  }
+
+  .title__menu {
+    display: none;
+
+    @media (min-width: vars.$min-size-ld) {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex: 0 0 40%;
+      font-weight: 500;
+    }
+
+    &-order {
+      @media (min-width: vars.$min-size-ld) {
+        padding: 10px 50px;
+        background-size: 40px 40px;
+        background: url("../img/repair.svg") no-repeat right center;
+
+        &:hover {
+          filter: drop-shadow(0 0 5px gray);
+        }
+      }
+    }
+
+    &-status {
+      @media (min-width: vars.$min-size-ld) {
+        padding: 10px 50px;
+        background-size: 40px 40px;
+        background: url("../img/check-status.svg") no-repeat right center;
+
+        &:hover {
+          filter: drop-shadow(0 0 5px gray);
+        }
+      }
+    }
+  }
+}

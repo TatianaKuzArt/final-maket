@@ -1,0 +1,19 @@
+@use '../../scss/vars';
+
+.footer {
+  padding-left: 16px;
+  padding-right: 16px;
+  @media (min-width: vars.$min-size-md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: vars.$title-color;
+    padding-left: 8px;
+    text-align: center;
+  }
+}

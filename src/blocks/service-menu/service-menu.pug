@@ -1,0 +1,10 @@
+mixin service-menu ()
+    mav.service-menu
+        ul.service-menu__items
+            each name, i in ["Ремонтируемые бренды", "Ремонтируемые устройства", "Цены на услуги", "Адреса сервисных центров", "Специальные цены", "Отзывы"]
+                if i === 0
+                    li
+                        a.service-menu__item.service-menu__item--active= name
+                else
+                    li
+                        a.service-menu__item= name

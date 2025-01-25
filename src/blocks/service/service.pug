@@ -1,0 +1,17 @@
+mixin service ()
+    - const services = []
+    - services.push('Ремонт ноутбуков')
+    - services.push('Ремонт планшетов')
+    - services.push('Ремонт ПК')
+    - services.push('Ремонт мониторов')
+    - services.push('Ремонт телевизоров')
+    - services.push('Ремонт приставок')
+    
+        +swiper(class="service")
+            +swiper-wrapper(class="service__items")
+                each service in services
+                    +swiper-slide(class="service__item")
+                        a.service__item-text(href="#")= service
+            +swiper-pagination
+        a.service__show-more(href="#") Показать все
+        a.service__hidden-more.hidden(href="#") Скрыть все

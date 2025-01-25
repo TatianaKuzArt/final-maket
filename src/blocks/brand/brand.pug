@@ -1,0 +1,10 @@
+mixin brand ()
+    +swiper(class="brand")
+        +swiper-wrapper(class="brand__items")
+            each src in ['../img/brands/lenovologo.svg','../img/brands/samsunglogo.svg','../img/brands/applelogo.svg','../img/brands/viewsoniclogo.svg','../img/brands/boshlogo.svg','../img/brands/hplogo.svg','../img/brands/acerlogo.svg','../img/brands/sonylogo.svg','../img/brands/lenovologo.svg','../img/brands/samsunglogo.svg','../img/brands/applelogo.svg']
+                +swiper-slide(class="brand__item")
+                    a(href="#")
+                        img(src=src)
+        +swiper-pagination
+    a.brand__show-more(href="#") Показать все
+    a.brand__hidden-more.hidden(href="#") Скрыть все

@@ -1,0 +1,40 @@
+@use '../../scss/vars';
+
+.sidebar {
+  display: grid;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  grid-template-rows: 70px auto auto 70px;
+  background: vars.$background-slide-color;
+  transition: transform .5s;
+  transform: translateX(-100%);
+  width: 100%;
+  z-index: 100;
+
+  @media (min-width: vars.$min-size-md) {
+    width: 320px;
+  }
+
+  @media (min-width: vars.$min-size-ld) {
+    transform: translateX(0);
+    position: static;
+    box-shadow: none !important;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+.sidebar.show {
+  transform: translateX(0);
+
+  @media (min-width: vars.$min-size-md) {
+    box-shadow: 16px 2px 52px #0E185033;
+  }
+}
+

@@ -1,0 +1,16 @@
+mixin menu-sidebar ()
+    ul.menu-sidebar
+        each name, i in ["Ремонт техники", "Услуги и сервисы", "Корпоративным клиентам", "Продавцам техники", "Партнерам", "Производителям", "Наши сервисные центры", "Контакты"]
+            if i === 0
+                li
+                    a.menu-sidebar__item.menu-sidebar__item--active.hover= name
+            else
+                li
+                    a.menu-sidebar__item.hover= name
+
+
+
+
+
+
+

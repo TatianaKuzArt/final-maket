@@ -1,0 +1,69 @@
+@use '../../scss/vars';
+@use '../../scss/global' as global;
+
+.service {
+  padding: 0;
+
+  &__items {
+    margin: 0;
+    padding-left: 16px;
+
+    @media (min-width: vars.$min-size-md) {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 8px;
+      grid-column-gap: 16px;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: vars.$min-size-ld) {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 32px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__item {
+    background: #FFFFFF url("../img/go.svg") no-repeat 90% 90%;
+    width: 240px;
+    height: 160px;
+    align-items: start;
+    padding-left: 8px;
+    padding-top: 20px;
+
+    @media (min-width: vars.$min-size-md ) and (width < vars.$min-size-ld){
+      width: 224px;
+      height: 160px;
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+
+    @media (min-width: vars.$min-size-ld) {
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+    .service__item-text {
+      text-decoration: none;
+      color: #1B1C21;
+    }
+  }
+
+  &__show-more {
+    @include global.show-more;
+    display: none;
+    background: url("../img/show-more.svg") no-repeat;
+    @media (min-width: vars.$min-size-md) {
+      display: block;
+    }
+  }
+
+  &__hidden-more {
+    @include global.show-more;
+    background: url("../img/hide.svg") no-repeat;
+  }
+}

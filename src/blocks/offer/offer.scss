@@ -1,0 +1,25 @@
+@use '../../scss/vars';
+
+.offer {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media (min-width: vars.$min-size-md) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  &__link {
+    display: inline;
+    text-decoration: none;
+    color: vars.$text-color;
+    font-weight: bold;
+    font-size: 16px;
+
+    &:after {
+      content: url("../img/line.svg");
+      position: absolute;
+      padding-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use '../../scss/vars';
+
+.agreement-info {
+    width: calc(100% - 64px);
+    display: inline;
+    justify-self: center;
+    color: vars.$color-active;
+
+    &--doc {
+      text-decoration: none;
+      color: vars.$color-attention;
+    }
+
+}

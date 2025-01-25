@@ -1,0 +1,40 @@
+@use '../../scss/vars';
+
+.footer-sidebar {
+  display: grid;
+  align-self: end;
+  &__mail {
+    padding-left: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  &__phone {
+    padding-left: 24px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+  }
+}
+
+.footer-sidebar-contact {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  padding-left: 24px;
+  height: 40px;
+
+  &__icon--call {
+    background: url('../img/call.svg') no-repeat;
+  }
+  &__icon--chat {
+    background: url('../img/chat.svg') no-repeat;
+  }
+  &__icon--profile {
+    background: url('../img/profile.svg') no-repeat;
+  }
+
+}
+

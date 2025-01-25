@@ -1,0 +1,24 @@
+mixin header ()
+    header.header
+        figure.header__left
+            +a("./img/burger.svg", "hover", "burger")
+            +p("./img/divider.svg", "header__item--hidden")
+            +a("./img/Group.svg", "header__item--logo")
+        figure.header__right
+            +a("./img/call.svg", "header__item--hidden hover", "call")
+            +a("./img/chat.svg", "header__item--hidden hover", "chat")
+            +a("./img/profile.svg", "header__item--hidden hover")
+            +p("./img/divider.svg")
+            +a("./img/repair.svg", "hover")
+            +a("./img/check-status.svg", "hover")
+
+
+
+
+mixin a(src, mods, id)
+    - const style = `background-image: url(${src})`;
+    a.header__item(class=mods style=style href="#" id=id)
+
+mixin p(src, mods)
+    - const style = `background-image: url(${src})`;
+    p.header__divide(class=mods style=style)

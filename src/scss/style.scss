@@ -1,0 +1,28 @@
+@use 'vars';
+@use 'global';
+
+@use 'swiper/css';
+@use 'swiper/css/pagination';
+
+@use '../blocks/header/header.scss';
+@use '../blocks/title/title.scss';
+@use '../blocks/service-menu/service-menu.scss';
+@use '../blocks/company-info/company-info.scss';
+@use '../blocks/chapter-title/chapter-title.scss';
+
+@use '../blocks/swiper/swiper.scss';
+@use '../blocks/brand/brand.scss';
+@use '../blocks/service/service.scss';
+@use '../blocks/price/price.scss';
+@use '../blocks/offer/offer.scss';
+@use '../blocks/footer/footer.scss';
+@use '../blocks/sidebar/sidebar.scss';
+@use '../blocks/header-sidebar/header-sidebar.scss';
+@use '../blocks/menu-sidebar/menu-sidebar.scss';
+@use '../blocks/footer-sidebar/footer-sidebar.scss';
+@use '../blocks/langlist-sidebar/langlist-sidebar.scss';
+@use '../blocks/feedback/feedback.scss';
+@use '../blocks/feedback-chat/feedback-chat.scss';
+@use '../blocks/feedback-call/feedback-call.scss';
+@use '../blocks/button-action/button-action.scss';
+@use '../blocks/agreement-info/agreement-info.scss';

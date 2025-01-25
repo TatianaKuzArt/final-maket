@@ -1,0 +1,28 @@
+include ./pug/mixins.pug
+
+doctype html
+html(lang= 'ru')
+    head
+        meta(charset='utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title= 'Final Project'
+    body
+        +sidebar()
+        +feedback("close-chat")(id="feedback--chat")
+            +feedback-chat()
+        +feedback("close-call")(id="feedback--call")
+            +feedback-call()
+        .main
+            +header()
+            +title()
+            +service-menu()
+            +company-info()
+            +chapter-title("РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ")
+            +brand()
+            +chapter-title("РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ")
+            +service()
+            +chapter-title("ЦЕНЫ НА УСЛУГИ")
+            +price()
+            +offer()
+            +footer()
+

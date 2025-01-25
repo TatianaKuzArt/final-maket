@@ -1,0 +1,63 @@
+@use 'vars';
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.woff');
+  //src: local('TT Lakes Regular'), local('TTLakes-Regular'), url('../fonts/TTLakes-Regular.woff') format('woff'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Bold.woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin show-more {
+  display: block;
+  text-decoration: none;
+  color: #1B1C21;
+  background-size: 24px 24px;
+  margin-left: 24px;
+  padding: 0 0 0 30px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: vars.$font;
+  background-color: vars.$background-body-color;
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: vars.$min-size-ld) {
+    display: grid;
+    grid-template-columns: 320px calc(100% - 320px);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.hover:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 5px gray);
+}
+

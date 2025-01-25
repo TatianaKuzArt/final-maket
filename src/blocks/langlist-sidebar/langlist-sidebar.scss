@@ -1,0 +1,21 @@
+@use '../../scss/vars';
+
+.langlist-sidebar {
+  display: flex;
+  align-self: end;
+  padding-left: 19px;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  list-style-type: none;
+
+  .langlist-sidebar__lang--active {
+    color: vars.$color-active;
+  }
+
+  a {
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+    color: vars.$text-color;
+  }
+}

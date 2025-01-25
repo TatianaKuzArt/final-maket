@@ -1,0 +1,53 @@
+@use '../../scss/vars';
+
+.feedback {
+  display: none;
+  box-sizing: border-box;
+  background: vars.$background-slide-color;
+  width: 320px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  transition: transform .5s ease-in;
+  transform: translateX(-300%);
+
+
+  @media (min-width: vars.$min-size-md) {
+    width: 440px;
+  }
+
+
+  &__close {
+    display: block;
+    background: url("../img/close.svg") no-repeat left;
+    background-size: 40px 40px;
+    height: 40px;
+    width: 40px;
+    margin: 16px 0 0 16px;
+
+    @media (min-width: vars.$min-size-md) {
+      position: absolute;
+      transition: transform .5s ease-in;
+      transform: translateX(100%);
+      left: -120px;
+      top: 20px;
+      margin: 0;
+    }
+  }
+
+}
+
+
+.feedback.show {
+  display: block;
+  transform: translateX(0%);
+
+  @media (min-width: vars.$min-size-md) {
+    box-shadow: -16px 2px 52px #0E185033;
+  }
+
+}
+
