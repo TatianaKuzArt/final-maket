@@ -1,9 +1,10 @@
 mixin feedback-chat ()
     aside.feedback-chat
         h2.feedback-chat__title Обратная связь
-        input(type="text", placeholder="Имя").feedback-chat__input
-        input(type="number", placeholder="Телефон").feedback-chat__input
-        input(type="text", placeholder="Электронная почта").feedback-chat__input
-        input(type="text", placeholder="Сообщение").feedback-chat__input.feedback-chat__input--text
+        label
+            input(type="text", placeholder="Имя").feedback-chat__input
+            input(type="number", placeholder="Телефон").feedback-chat__input
+            input(type="text", placeholder="Электронная почта").feedback-chat__input
+            input(type="text", placeholder="Сообщение").feedback-chat__input.feedback-chat__input--text
         +agreement-info()
         +button-action("ОТПРАВИТЬ")(class="feedback-chat__send")

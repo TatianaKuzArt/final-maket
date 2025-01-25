@@ -1,6 +1,7 @@
 mixin feedback-call ()
     aside.feedback-call
         h2.feedback-call__title Заказать звонок
-        input(type="number", placeholder="Телефон").feedback-call__input
+        label
+            input(type="number", placeholder="Телефон").feedback-call__input
         +agreement-info()
         +button-action("ОТПРАВИТЬ")(class="feedback-call__send")
