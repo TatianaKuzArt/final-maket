@@ -12,16 +12,24 @@
     align-self: center;
   }
 
-  &__input {
+  &__lable {
+    display: grid;
     width: calc(100% - 64px);
-    height: 48px;
-    border-radius: 8px;
     align-self: center;
+    justify-self: center;
+  }
+
+  &__input {
+    height: 48px;
+    width: 100%;
+    padding-left: 16px;
+    border-radius: 8px;
     justify-self: center;
     border: 1px solid #EAEAEA;
     font-family: "TT Lakes", serif;
     font-size: 16px;
   }
+
 
   &__send {
     margin: 16px 32px 16px 0;
